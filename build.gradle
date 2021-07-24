@@ -1,0 +1,42 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.5'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+
+
+group = 'com.xingsk'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url 'https://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    maven {
+        url "https://repo.spring.io/libs-milestone"
+    }
+}
+
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'io.spring.initializr:initializr-generator-spring:0.10.2'
+    implementation 'io.spring.initializr:initializr-bom:0.10.2'
+    implementation 'io.spring.initializr:initializr-generator:0.10.2'
+    implementation 'io.spring.initializr:initializr-web:0.10.2'
+
+
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+    implementation 'io.spring.initializr:initializr-actuator:0.10.2'
+}
+
+test {
+    useJUnitPlatform()
+}
