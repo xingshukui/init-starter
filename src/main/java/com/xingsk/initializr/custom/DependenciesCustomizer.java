@@ -1,6 +1,5 @@
 package com.xingsk.initializr.custom;
 
-import com.xingsk.initializr.custom.DependencyContainer;
 import io.spring.initializr.generator.buildsystem.gradle.GradleBuild;
 import io.spring.initializr.generator.spring.build.BuildCustomizer;
 

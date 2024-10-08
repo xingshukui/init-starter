@@ -19,7 +19,9 @@ public class DependencyContainer {
 
 
     static {
-        dependencies.put("lombok", Dependency.withCoordinates("org.projectlombok", "lombok").build());
+        dependencies.put("lombok", Dependency
+                .withCoordinates("org.projectlombok", "lombok")
+                .build());
         dependencies.put("spring-web", Dependency.withCoordinates("org.springframework.boot", "spring-boot-starter-web").build());
 
         dependencies.put("spock-spring", Dependency.withCoordinates("org.spockframework", "spock-spring").version(VersionReference.ofValue("1.3-RC1-groovy-2.4")).scope(DependencyScope.TEST_RUNTIME).build());

@@ -17,6 +17,10 @@ public class DefaultProjectDescriptionCustomizer implements ProjectDescriptionCu
         description.setPackageName("com.xingsk");
     }
 
+    /**
+     * todo
+     * @return
+     */
     @Override
     public int getOrder() {
         return 0;
